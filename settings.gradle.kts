@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "AndroidDevId"
 include(":app")
- 
+include(":devid")

@@ -1,4 +1,4 @@
-package com.jiang.androiddevid
+package jiang.devid
 
 import android.content.Context
 import com.baidu.liantian.ac.LH
@@ -23,9 +23,8 @@ object Tools {
                 if (deviceId?.second != null) {
                     deviceID = (deviceId.second as String).uppercase(Locale.getDefault())
                 }
-            } catch (var2: java.lang.Exception) {
-                val var2 = var2
-                var2.printStackTrace()
+            } catch (e: Exception) {
+                e.printStackTrace()
             }
         }
 
