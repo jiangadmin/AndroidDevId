@@ -4,7 +4,7 @@ plugins {
     id("maven-publish")
 }
 
-group = "com.github.jiang"
+group = "com.github.jiangadmin"
 version = "1.0.0"
 
 android {
@@ -38,7 +38,7 @@ afterEvaluate {
             register<MavenPublication>("release") {
                 from(components["release"])
                 
-                groupId = "com.github.jiang"
+                groupId = "com.github.jiangadmin"
                 artifactId = "devid"
                 version = "1.0.0"
             }

@@ -35,7 +35,7 @@ android {
 dependencies {
 
     implementation(project(":devid"))
-    // implementation("com.github.jiangmac.AndroidDevId:devid:1.0.0")
+//     implementation("com.github.jiangadmin.AndroidDevId:devid:1.0.0")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
