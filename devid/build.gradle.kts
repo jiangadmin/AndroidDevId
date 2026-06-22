@@ -1,7 +1,11 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("maven-publish")
 }
+
+group = "com.github.jiang"
+version = "1.0.0"
 
 android {
     namespace = "jiang.devid"
@@ -21,6 +25,25 @@ android {
         jvmTarget = "11"
     }
 
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+        }
+    }
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            register<MavenPublication>("release") {
+                from(components["release"])
+                
+                groupId = "com.github.jiang"
+                artifactId = "devid"
+                version = "1.0.0"
+            }
+        }
+    }
 }
 
 dependencies {
@@ -32,5 +55,4 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
 
     implementation(files("libs/liantian.jar"))
-
 }
